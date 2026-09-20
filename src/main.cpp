@@ -9,7 +9,7 @@ int main() {
     for (int i = 0; i < 10; ++i)
         m1[i] = i * 10;
 
-    std::cout << "=== std::map, std::allocator ===\n";
+    std::cout << " std::map со стандартным аллокатором \n";
     for (const auto& [k, v] : m1)
         std::cout << k << " -> " << v << "\n";
 
@@ -18,7 +18,7 @@ int main() {
     for (int i = 0; i < 10; ++i)
         m2[i] = i * 100;
 
-    std::cout << "\n=== std::map, PoolAllocator ===\n";
+    std::cout << "\n std::map с пуловым аллокатором \n";
     for (const auto& [k, v] : m2)
         std::cout << k << " -> " << v << "\n";
 
@@ -26,7 +26,7 @@ int main() {
     for (int i = 0; i < 10; ++i)
         list1.push_back(i);
 
-    std::cout << "\n=== MyList, std::allocator (size=" << list1.size() << ") ===\n";
+    std::cout << "\n Свой контейнер со стандартным аллокатором (size=" << list1.size() << ") \n";
     for (int v : list1) std::cout << v << " ";
     std::cout << "\n";
 
@@ -34,7 +34,7 @@ int main() {
     for (int i = 10; i < 20; ++i)
         list2.push_back(i);
 
-    std::cout << "\n=== MyList, PoolAllocator (size=" << list2.size() << ") ===\n";
+    std::cout << "\nСвой контейнер с пуловым аллокатором (size=" << list2.size() << ")\n";
     for (int v : list2) std::cout << v << " ";
     std::cout << "\n";
 
