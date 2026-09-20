@@ -9,7 +9,7 @@ int main() {
     for (int i = 0; i < 10; ++i)
         m1[i] = i * 10;
 
-    std::cout << " std::map со стандартным аллокатором \n";
+    std::cout <<"\nstd::map со стандартным аллокатором \n";
     for (const auto& [k, v] : m1)
         std::cout << k << " -> " << v << "\n";
 
@@ -18,7 +18,7 @@ int main() {
     for (int i = 0; i < 10; ++i)
         m2[i] = i * 100;
 
-    std::cout << "\n std::map с пуловым аллокатором \n";
+    std::cout << "\nstd::map с пуловым аллокатором \n";
     for (const auto& [k, v] : m2)
         std::cout << k << " -> " << v << "\n";
 
@@ -26,7 +26,7 @@ int main() {
     for (int i = 0; i < 10; ++i)
         list1.push_back(i);
 
-    std::cout << "\n Свой контейнер со стандартным аллокатором (size=" << list1.size() << ") \n";
+    std::cout << "\nСвой контейнер со стандартным аллокатором (size=" << list1.size() << ") \n";
     for (int v : list1) std::cout << v << " ";
     std::cout << "\n";
 
