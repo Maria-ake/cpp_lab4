@@ -24,7 +24,7 @@ class PoolAllocator {
         void* allocate() {
             if (freeSlots.empty()) {
                 char* chunk = static_cast<char*>(::operator new(BlockSize * slotSize));
-                chunks.push_back(chunk);ера
+                chunks.push_back(chunk);
                 for (std::size_t i = 0; i < BlockSize; ++i) {
                     freeSlots.push_back(chunk + i * slotSize);
                 }
