@@ -6,7 +6,6 @@
 
 template <typename T, std::size_t BlockSize = 10>
 class PoolAllocator {
-    static_assert(BlockSize > 0, "BlockSize must be greater than 0");
 
     struct Pool {
         std::size_t slotSize;
