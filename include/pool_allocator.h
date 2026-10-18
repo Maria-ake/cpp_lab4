@@ -37,7 +37,7 @@ class PoolAllocator {
                 chunks.push_back(chunk);
                 for (std::size_t i = 0; i < BlockSize; ++i)
                     freeSlots.push_back(chunk + i * slotSize);
-                std::cout << "  Куплен новый чанк #" << chunks.size()
+                std::cout << "  Взят новый чанк #" << chunks.size()
                           << " (" << BlockSize << " ячеек по "
                           << slotSize << " байт)\n";
             }
